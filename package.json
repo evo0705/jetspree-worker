@@ -7,7 +7,7 @@
     "dev": "nodemon -w src --exec \"babel-node src/app --presets es2015,stage-0\"",
     "build": "babel src -s -D -d dist --presets es2015,stage-0",
     "start": "node dist/app",
-    "prestart": "npm run -s build",
+    "prestart": "npm run -s build"
   },
   "eslintConfig": {
     "extends": "eslint:recommended",
