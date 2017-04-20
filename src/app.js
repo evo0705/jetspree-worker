@@ -23,6 +23,8 @@ const queue = kue.createQueue({
     redis: process.env.REDIS
 });
 
+queue.watchStuckJobs(6000);
+
 const mg = mailgun.client({username: 'api', key: process.env.MAILGUN_API_KEY});
 
 queue.process('email', 20, function (job, done) {
